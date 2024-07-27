@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-export const Ticket = () => {
+export const Ticket = ({ data }) => {
     return (
         <div class="flex flex-col items-center justify-center animate__animated animate__fadeInUp">
             <div class="max-w-md w-full h-full mx-auto z-10 rounded-3xl">
@@ -9,7 +9,7 @@ export const Ticket = () => {
                         <div class="flex-none sm:flex">
                             <div class=" relative h-32 w-32 sm:mb-0 mb-3 hidden">
                                 <img src="https://tailwindcomponents.com/storage/avatars/njkIbPhyZCftc4g9XbMWwVsa7aGVPajYLRXhEeoo.jpg" alt="aji" class=" w-32 h-32 object-cover rounded-2xl" />
-                                <a href="#"
+                                <div href="#"
                                     class="absolute -right-2 bottom-2 -ml-3  text-white p-1 text-xs bg-green-400 hover:bg-green-500 font-medium tracking-wider rounded-full transition ease-in duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                         class="h-4 w-4">
@@ -17,13 +17,13 @@ export const Ticket = () => {
                                             d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z">
                                         </path>
                                     </svg>
-                                </a>
+                                </div>
                             </div>
                             <div class="flex-auto justify-evenly">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center  my-1">
                                         <span class="mr-3 rounded-full bg-white w-8 h-8">
-                                            <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" class="h-8 p-1" />
+                                            <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" class="h-8 p-1" alt="" />
                                         </span>
                                         <h2 class="font-medium">Airindia</h2>
                                     </div>
