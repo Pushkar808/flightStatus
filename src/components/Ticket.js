@@ -1,6 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import moment from 'moment';
 export const Ticket = ({ data }) => {
+    const getStatusstyle = (fStatus) => {
+        switch (fStatus) {
+            case "ontime":
+                return "text-green-500";
+            case "cancelled":
+                return "text-red-500";
+            case "delayed":
+                return "text-yellow-500 animate-pulse";
+            default:
+                return "text-gray-500";
+        }
+    }
     return (
         <div class="flex flex-col items-center justify-center animate__animated animate__fadeInUp">
             <div class="max-w-md w-full h-full mx-auto z-10 rounded-3xl">
@@ -25,9 +38,9 @@ export const Ticket = ({ data }) => {
                                         <span class="mr-3 rounded-full bg-white w-8 h-8">
                                             <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" class="h-8 p-1" alt="" />
                                         </span>
-                                        <h2 class="font-medium">Airindia</h2>
+                                        <h2 class="font-medium capitalize">{data?.airline}</h2>
                                     </div>
-                                    <div class="ml-auto text-blue-800">A380</div>
+                                    <div class="ml-auto text-blue-800">{data?.flight_id}</div>
                                 </div>
                                 {/* <div class="border-b border-dashed border-b-2 my-5"></div>
                                 <div class="flex items-center">
@@ -56,29 +69,29 @@ export const Ticket = ({ data }) => {
                                 <div class="flex items-center mb-5 p-5 text-sm">
                                     <div class="flex flex-col">
                                         <span class="text-sm">Departure Gate</span>
-                                        <div class="font-semibold">A1</div>
+                                        <div class="font-semibold">{data?.departure_gate}</div>
 
                                     </div>
                                     <div class="flex flex-col ml-auto">
                                         <span class="text-sm">Arrival Gate</span>
-                                        <div class="font-semibold text-right">B3</div>
+                                        <div class="font-semibold text-right">{data?.arrival_gate}</div>
 
                                     </div>
                                 </div>
                                 <div class="flex items-center mb-4 px-5">
                                     <div class="flex flex-col text-sm">
                                         <span class="">Board</span>
-                                        <div class="font-semibold">11:50AM</div>
+                                        <div class="font-semibold">{moment(data?.scheduled_departure).format("LT")}</div>
 
                                     </div>
                                     <div class="flex flex-col mx-auto text-sm">
                                         <span class="">Flight Status</span>
-                                        <div class="font-semibold text-center">Delayed</div>
+                                        <div class={`font-semibold text-center capitialize capitalize ${getStatusstyle(data?.status)}`}>{data?.status}</div>
 
                                     </div>
                                     <div class="flex flex-col text-sm">
                                         <span class="text-right">Arrival</span>
-                                        <div class="font-semibold">2:00PM</div>
+                                        <div class="font-semibold">{moment(data?.scheduled_arrival).format("LT")}</div>
 
                                     </div>
                                 </div>

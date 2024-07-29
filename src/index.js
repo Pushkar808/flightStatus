@@ -9,7 +9,7 @@ import configureStore from "./store/store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div class="getFrame" src="/" className='hideScrollbar md:w-[450px] md:m-auto h-screen overflow-y-auto border border-black md:rounded-[30px]'>
+    <div class="getFrame" src="/" className='hideScrollbar md:w-[450px] md:m-auto h-screen overflow-y-auto border border-black'>
       <Provider store={configureStore()}>
         <BrowserRouter>
           <App />
