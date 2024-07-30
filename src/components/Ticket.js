@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import moment from 'moment';
 export const Ticket = ({ data }) => {
     const getStatusstyle = (fStatus) => {
@@ -36,34 +35,12 @@ export const Ticket = ({ data }) => {
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center  my-1">
                                         <span className="mr-3 rounded-full bg-white w-8 h-8">
-                                            <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" className="h-8 p-1" alt="" />
+                                            <img src="/images/logo.png" className="h-8 p-1" alt="" />
                                         </span>
                                         <h2 className="font-medium capitalize">{data?.airline}</h2>
                                     </div>
                                     <div className="ml-auto text-blue-800">{data?.flight_id}</div>
                                 </div>
-                                {/* <div className="border-b border-dashed border-b-2 my-5"></div>
-                                <div className="flex items-center">
-                                    <div className="flex flex-col">
-                                        <div className="flex-auto text-xs text-gray-400 my-1">
-                                            <span className="mr-1 ">MO</span><span>19 22</span>
-                                        </div>
-                                        <div className="w-full flex-none text-lg text-blue-800 font-bold leading-none">COK</div>
-                                        <div className="text-xs">Cochi</div>
-
-                                    </div>
-                                    <div className="flex flex-col mx-auto">
-                                        <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" className="w-20 p-1" />
-                                    </div>
-                                    <div className="flex flex-col ">
-                                        <div className="flex-auto text-xs text-gray-400 my-1">
-                                            <span className="mr-1">MO</span><span>19 22</span>
-                                        </div>
-                                        <div className="w-full flex-none text-lg text-blue-800 font-bold leading-none">DXB</div>
-                                        <div className="text-xs">Dubai</div>
-
-                                    </div>
-                                </div> */}
                                 <div className="border-b border-dashed border-b-2 pt-5" >
                                 </div>
                                 <div className="flex items-center mb-5 p-5 text-sm">

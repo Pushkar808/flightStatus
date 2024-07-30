@@ -21,27 +21,12 @@ export const Home = () => {
                     backgroundPosition: 'center',
                     backgroundSize: 'contain'
                 }} />
-                {/* <div className='absolute h-[350px] -bottom-32 w-96 bg-white rounded-lg px-5 pt-24 '> */}
                 <div className='absolute -bottom-28 md:w-[410px] w-[90%] bg-white rounded-lg px-5 py-6'>
                     <div className='flex justify-center'>
                         <img src="/images/logo2.jpg" width={120} height={80} className='rounded' alt="logo" />
                     </div>
                     <h1 className='pb-2 px-1 py-5 text-[14px]'>Search Flight by Flight Number </h1>
                     <div className='flex flex-col gap-2'>
-                        {/* <div className='relative border-2 rounded-2xl px-2'>
-                            <div className="flex items-center py-2 px-3">
-                                <img src="/images/plane-departure-solid.svg" width={20} height={20} className="h-5 w-5 text-gray-400 mr-1" alt="" />
-                                <input id="email" className=" pl-1 w-full outline-none border-none pr-[50px]" type="email" name="email" placeholder="Email Address1" />
-                            </div>
-                            <hr className='w-[270px]' />
-                            <div className='p-2 absolute right-5 top-5 border border-blue-500 cursor-pointer rounded-xl rotate-90 hover:shadow-md'>
-                                <img src="/images/right-left-solid.svg" alt="swapIcon" width={20} height={20} />
-                            </div>
-                            <div className="flex items-center py-2 px-3">
-                                <img src="/images/plane-arrival-solid.svg" width={20} height={20} className="h-5 w-5 text-gray-400 mr-1" alt="" />
-                                <input id="email" className=" pl-1 w-full outline-none border-none pr-[50px]" type="email" name="email" placeholder="Email Address2" />
-                            </div>
-                        </div> */}
                         <div className="flex items-center border-2 py-2 px-3 rounded-xl">
                             <img src="/images/plane-arrival-solid.svg" width={20} height={20} className="h-5 w-5 text-gray-400 mr-1" alt="" />
                             <input id="text" className=" pl-2 w-full outline-none border-none" type="text" name="text" placeholder="Flight Number Goes Here" onChange={(e) => setFlightNumber(e.target.value)} />
