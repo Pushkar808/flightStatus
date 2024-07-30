@@ -12,6 +12,8 @@ This is the frontend of the Flight Notification System, built with React.js. The
 - **Socket.IO-Client**: For real-time communication with the backend via WebSockets.
 - **React Router**: For client-side routing and navigation.
 
+## Project Overview Presentation
+https://docs.google.com/presentation/d/10YiPcin0JHI16i9vgXCxCcbjMWQ62fNW/edit?usp=sharing&ouid=105000100424037303610&rtpof=true&sd=true
   
 ## Prerequisites
 
