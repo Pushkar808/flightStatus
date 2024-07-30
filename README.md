@@ -19,6 +19,9 @@ It is built using Node.js with Express, and includes features such as email noti
 - Node.js and npm installed on your machine.
 - Environment variables configured (see code).
 
+## Project Overview Presentation
+https://docs.google.com/presentation/d/10YiPcin0JHI16i9vgXCxCcbjMWQ62fNW/edit?usp=sharing&ouid=105000100424037303610&rtpof=true&sd=true
+
 ## Installation
 
 1. **Clone the repository**:
