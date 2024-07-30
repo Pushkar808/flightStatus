@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "3b64963a-5bcd-4a12-b580-35dc10060030",
+		"name": "New Collection",
+		"description": "Flight Notification System API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34681080"
+	},
+	"item": [
+		{
+			"name": "search Flight Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flightNumber\":\"6E341\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/flight/getFlightData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"getFlightData"
+					]
+				},
+				"description": "API to search data according to the flightNumber"
+			},
+			"response": []
+		},
+		{
+			"name": "Changing Flight Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"status\",\r\n    \"gateType\":\"arrival\",\r\n    \"value\":\"ontime\",\r\n    \"flight_id\":\"6E 2341\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/flight/changeFlightStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"changeFlightStatus"
+					]
+				},
+				"description": "Change flight status like departure_gate , status , time from this API"
+			},
+			"response": []
+		},
+		{
+			"name": "Adding Flight Data(s)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"airline\": \"Airways A\",\r\n            \"flightNumber\": \"AA123\",\r\n            \"departureTime\": \"2024-08-01T10:00:00Z\",\r\n            \"arrivalTime\": \"2024-08-01T12:00:00Z\",\r\n            \"status\": \"on-time\"\r\n        },\r\n        {\r\n            \"airline\": \"Airways B\",\r\n            \"flightNumber\": \"BB456\",\r\n            \"departureTime\": \"2024-08-02T14:00:00Z\",\r\n            \"arrivalTime\": \"2024-08-02T16:00:00Z\",\r\n            \"status\": \"delayed\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/flight/addFlightData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"flight",
+						"addFlightData"
+					]
+				},
+				"description": "Add one or more data of flights"
+			},
+			"response": []
+		}
+	]
+}
