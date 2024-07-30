@@ -11,7 +11,7 @@ export const Splash = () => {
             }} />
             <div className="relative z-10 text-white flex flex-col h-full justify-between">
                 <div className='mt-[50px] mx-auto'>
-                    <img src="/images/logo2.jpg" width={120} />
+                    <img src="/images/logo2.jpg" width={120} alt="" />
                 </div>
                 <div className='text-center'>
                     <h1 className='mt-4 mb-4 font-semibold leading-[1.3em] text-[30px] capitalize'>Flight Status at Your Fingertips!</h1>
